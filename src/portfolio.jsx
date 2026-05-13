@@ -56,15 +56,14 @@
 // const SKILLS = [
 //   { name: "HTML & CSS", level: 95 },
 //   { name: "JavaScript", level: 85 },
-//   { name: "React", level: 82 },
-//   { name: "Tailwind CSS", level: 88 },
-//   { name: "UI/UX Design", level: 80 },
-//   { name: "Git / GitHub", level: 78 },
+//   { name: "React", level: 80 },
+//   { name: "Tailwind CSS", level: 85 },
+//   { name: "Git / GitHub", level: 80 },
 // ];
 
 // const TOOLS = [
-//   "Figma", "VS Code", "GitHub", "Vercel", "Netlify",
-//   "Chrome DevTools", "Notion", "Git", "Responsive Design", "Accessibility",
+//   "VS Code", "GitHub", "Vercel",
+//   "Chrome DevTools", "Git", "Responsive Design", "Accessibility",
 // ];
 
 // function useInView(threshold = 0.15) {
@@ -926,7 +925,7 @@ const PROJECTS = [
     tag: "UI/UX Design",
     year: "2023",
     desc: "A student networking platform designed during training at Digital Fortress Institute — wireframes, prototypes, and a React-based frontend implementation.",
-    tech: ["React", "Figma", "CSS", "GitHub"],
+    tech: ["React", "CSS", "GitHub"],
     color: "#533AB7", bg: "#EEEDFE", accent: "#7F77DD", link: "#",
   },
 ];
@@ -934,15 +933,14 @@ const PROJECTS = [
 const SKILLS = [
   { name: "HTML & CSS", level: 95 },
   { name: "JavaScript", level: 85 },
-  { name: "React", level: 82 },
-  { name: "Tailwind CSS", level: 88 },
-  { name: "UI/UX Design", level: 80 },
-  { name: "Git / GitHub", level: 78 },
+  { name: "React", level: 80 },
+  { name: "Tailwind CSS", level: 85 },
+  { name: "Git / GitHub", level: 82 },
 ];
 
 const TOOLS = [
-  "Figma", "VS Code", "GitHub", "Vercel", "Netlify",
-  "Chrome DevTools", "Notion", "Git", "Responsive Design", "Accessibility",
+ "VS Code", "GitHub", "Vercel","Chrome DevTools", 
+  "Git", "Responsive Design", "Accessibility",
 ];
 
 function useIsMobile() {
@@ -1189,7 +1187,7 @@ function Hero() {
           >
             View My Work <span style={{ fontSize: 16 }}>→</span>
           </button>
-          <a href="https://github.com" target="_blank" rel="noreferrer" style={{
+          <a href="https://github.com/dejitheog" target="_blank" rel="noreferrer" style={{
             background: "rgba(255,255,255,0.06)",
             border: "1px solid rgba(255,255,255,0.12)",
             color: "#fff", fontSize: isMobile ? 14 : 15,
@@ -1348,13 +1346,17 @@ function About() {
               display: "flex", flexDirection: "column",
               alignItems: "center", justifyContent: "center", gap: 12,
             }}>
-              <div style={{
-                width: isMobile ? 72 : 120, height: isMobile ? 72 : 120, borderRadius: "50%",
-                background: "linear-gradient(135deg, #A8FF3E22, #1D9E7522)",
+                          <img
+              src="/profile.jpeg"
+              alt="Peculiar David"
+              style={{
+                width: isMobile ? 72 : 120,
+                height: isMobile ? 72 : 120,
+                borderRadius: "50%",
+                objectFit: "cover",
                 border: "2px solid rgba(168,255,62,0.2)",
-                display: "flex", alignItems: "center", justifyContent: "center",
-                fontSize: isMobile ? 28 : 40,
-              }}>👨🏾‍💻</div>
+              }}
+/>
               <div style={{ fontFamily: "'Syne', sans-serif", fontSize: isMobile ? 15 : 18, fontWeight: 800, color: "#fff" }}>Peculiar David</div>
               <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10, color: "rgba(255,255,255,0.35)", letterSpacing: "0.1em" }}>FRONTEND DEV & DESIGNER</div>
             </div>
@@ -1396,8 +1398,8 @@ function About() {
           <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
             {[
               { icon: "🐦", label: "Twitter", href: "#" },
-              { icon: "💼", label: "LinkedIn", href: "#" },
-              { icon: "📄", label: "Resume", href: "#" },
+              { icon: "💼", label: "LinkedIn", href: "https://www.linkedin.com/in/peculiar-olorunsola-7663a3212/" },
+              { icon: "📄", label: "Resume", href: "https://drive.google.com/file/d/13szWET8-a61zeA9wRyuqFkwCzQYus2DU/view?usp=drive_link" },
             ].map(({ icon, label, href }) => (
               <a key={label} href={href} style={{
                 display: "flex", alignItems: "center", gap: 6,
@@ -1583,8 +1585,8 @@ function Contact() {
         <AnimSection delay={isMobile ? 0 : 200}>
           <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
             {[
-              { label: "Email", value: "peculiar@peculiardesigns.io", icon: "✉" },
-              { label: "Location", value: "Nigeria", icon: "📍" },
+              { label: "Email", value: "olorunsolapeculiar@gmail.com", icon: "✉" },
+              { label: "Location", value: "Lagos,Nigeria", icon: "📍" },
               { label: "Availability", value: "Open to opportunities", icon: "🟢" },
             ].map(({ label, value, icon }) => (
               <div key={label} style={{
