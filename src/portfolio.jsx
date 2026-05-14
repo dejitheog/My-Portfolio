@@ -7,40 +7,47 @@ const NAV_LINKS = ["Work", "About", "Skills", "Contact"];
 const PROJECTS = [
   {
     id: 1,
-    title: "Peculiar Designs Studio",
-    tag: "Brand & UI Design",
-    year: "2024",
-    desc: "A personal design studio showcase featuring curated UI/UX case studies, brand identities, and creative direction — built with smooth micro-interactions.",
-    tech: ["React", "Tailwind CSS", "Figma", "CSS Animations"],
-    color: "#0F6E56", bg: "#E1F5EE", accent: "#1D9E75", link: "#",
+    title: "HWC Fashion School",
+    tag: "Landing Page",
+    year: "2025",
+    desc: "A stunning fashion portfolio website for HWC Fashion School, Lagos — showcasing custom tailoring, student work, graduate profiles, and academy enrollment. Built with smooth scrolling and a fully responsive layout.",
+    tech: ["HTML", "CSS", "JavaScript"],
+    color: "#0F6E56", bg: "#E1F5EE", accent: "#1D9E75",
+    link: "https://hwc-fashion-portfolio.vercel.app/",
   },
+
   {
     id: 2,
-    title: "ShopEase E-commerce",
+    title: "TIND Logistics",
     tag: "Web App",
-    year: "2024",
-    desc: "A fully responsive e-commerce storefront with dynamic product filtering, cart state management, and a seamless checkout flow.",
-    tech: ["React", "JavaScript", "Tailwind CSS", "Git"],
-    color: "#185FA5", bg: "#E6F1FB", accent: "#378ADD", link: "#",
+    year: "2025",
+    desc: "A modern logistics platform built as a group project — designed to streamline delivery tracking, shipment management, and customer communication for a seamless logistics experience.",
+    tech: ["React", "JavaScript", "CSS"],
+    color: "#854F0B", bg: "#FAEEDA", accent: "#BA7517",
+    link: "https://frontend-project-beta-opal.vercel.app/",
   },
+
   {
     id: 3,
-    title: "DevFolio Template",
-    tag: "UI Template",
-    year: "2024",
-    desc: "An open-source, fully responsive portfolio template for developers — pixel-perfect on all screen sizes, with dark mode and accessible markup.",
-    tech: ["HTML", "CSS", "JavaScript", "Responsive Design"],
-    color: "#854F0B", bg: "#FAEEDA", accent: "#BA7517", link: "#",
+    title: "Sky Watch",
+    tag: "Web App",
+    year: "2026",
+    desc: "A sleek real-time weather app that fetches live forecasts by location — displaying temperature, humidity, wind speed, and daily conditions with a clean, intuitive interface.",
+    tech: ["React", "Weather API", "JavaScript"],
+    color: "#185FA5", bg: "#E6F1FB", accent: "#378ADD",
+    link: "https://weather-app-five-smoky-98.vercel.app/",
   },
+
   {
-    id: 4,
-    title: "Campus Connect",
-    tag: "UI/UX Design",
-    year: "2023",
-    desc: "A student networking platform designed during training at Digital Fortress Institute — wireframes, prototypes, and a React-based frontend implementation.",
-    tech: ["React", "CSS", "GitHub"],
-    color: "#533AB7", bg: "#EEEDFE", accent: "#7F77DD", link: "#",
-  },
+  id: 4,
+  title: "Peculiar Designs Portfolio",
+  tag: "Portfolio",
+  year: "2025",
+  desc: "My personal developer portfolio — designed and built from scratch to showcase my work, skills, and identity as a Frontend Developer and Creative Designer.",
+  tech: ["React", "JavaScript", "CSS"],
+  color: "#533AB7", bg: "#EEEDFE", accent: "#7F77DD",
+  link: "https://my-portfolio-ten-pink-35.vercel.app/",
+},
 ];
 
 const SKILLS = [
@@ -399,14 +406,15 @@ function ProjectCard({ project, index }) {
           }}>{t}</span>
         ))}
       </div>
-      <div style={{
-        display: "flex", alignItems: "center", gap: 6,
-        fontFamily: "'DM Sans', sans-serif", fontSize: 13, fontWeight: 600,
-        color: hovered ? "#A8FF3E" : "rgba(255,255,255,0.35)", transition: "color 0.3s",
-      }}>
-        View Project
-        <span style={{ display: "inline-block", transform: hovered ? "translateX(4px)" : "translateX(0)", transition: "transform 0.3s" }}>→</span>
-      </div>
+          <a href={project.link} target="_blank" rel="noreferrer" style={{
+    display: "flex", alignItems: "center", gap: 6,
+    fontFamily: "'DM Sans', sans-serif", fontSize: 13, fontWeight: 600,
+    color: hovered ? "#A8FF3E" : "rgba(255,255,255,0.35)", transition: "color 0.3s",
+    textDecoration: "none",
+  }}>
+    View Project
+    <span style={{ display: "inline-block", transform: hovered ? "translateX(4px)" : "translateX(0)", transition: "transform 0.3s" }}>→</span>
+  </a>
     </div>
   );
 }
@@ -639,11 +647,18 @@ function Contact() {
   const [sent, setSent] = useState(false);
   const isMobile = useIsMobile();
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
+  const res = await fetch("https://formspree.io/f/mzdoqwjw", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(form),
+  });
+  if (res.ok) {
     setSent(true);
     setTimeout(() => setSent(false), 4000);
     setForm({ name: "", email: "", message: "" });
-  };
+  }
+};
 
   return (
     <section id="contact" style={{ padding: isMobile ? "80px 1.25rem" : "120px 2rem", maxWidth: 1200, margin: "0 auto" }}>
