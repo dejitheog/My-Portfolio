@@ -461,7 +461,7 @@ function About() {
             }}>
                           <img
               src="/profile.jpeg"
-              alt="Peculiar David"
+              alt=" Olorunsola Peculiar David"
               style={{
                 width: isMobile ? 120 : 300,
                 height: isMobile ? 120 : 300,
