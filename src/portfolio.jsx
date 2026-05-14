@@ -470,8 +470,8 @@ function About() {
                 border: "2px solid rgba(168,255,62,0.2)",
               }}
 />
-              <div style={{ fontFamily: "'Syne', sans-serif", fontSize: isMobile ? 15 : 18, fontWeight: 800, color: "#fff" }}>Peculiar David</div>
-              <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10, color: "rgba(255,255,255,0.35)", letterSpacing: "0.1em" }}>FRONTEND DEV & DESIGNER</div>
+              <div style={{ fontFamily: "'Syne', sans-serif", fontSize: isMobile ? 15 : 18, fontWeight: 800, color: "#fff" }}>Olorunsola Peculiar David</div>
+              <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: 10, color: "rgba(255,255,255,0.35)", letterSpacing: "0.1em" }}>FRONTEND DEVELOPER</div>
             </div>
             {[...Array(9)].map((_, i) => (
               <div key={i} style={{
