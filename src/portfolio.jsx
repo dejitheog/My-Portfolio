@@ -48,6 +48,18 @@ const PROJECTS = [
   color: "#533AB7", bg: "#EEEDFE", accent: "#7F77DD",
   link: "https://my-portfolio-ten-pink-35.vercel.app/",
 },
+
+{
+  id: 5,
+  title: "AI Chat Assistant",
+  tag: "AI Web App",
+  year: "2026",
+  desc: "A real-time AI chat application powered by the Groq API — delivering lightning-fast conversational responses with a clean messaging interface and smooth user experience built in React.",
+  tech: ["React", "JavaScript", "Groq API", "CSS"],
+  color: "#0F6E56", bg: "#E1F5EE", accent: "#1D9E75",
+  link: "https://my-portfolio-ten-pink-35.vercel.app/chat",
+},
+
 ];
 
 const SKILLS = [
