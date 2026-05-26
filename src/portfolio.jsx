@@ -8,12 +8,12 @@ const PROJECTS = [
   {
     id: 1,
     title: "HWC Fashion School",
-    tag: "Landing Page",
+    tag: "Web App",
     year: "2025",
     desc: "A stunning fashion portfolio website for HWC Fashion School, Lagos — showcasing custom tailoring, student work, graduate profiles, and academy enrollment. Built with smooth scrolling and a fully responsive layout.",
-    tech: ["HTML", "CSS", "JavaScript"],
+    tech: ["React", "JavaScript", "CSS"],
     color: "#0F6E56", bg: "#E1F5EE", accent: "#1D9E75",
-    link: "https://hwc-fashion-portfolio.vercel.app/",
+    link: "https://hwc-fashion-school.vercel.app/",
   },
 
   {
@@ -60,6 +60,16 @@ const PROJECTS = [
   link: "https://my-portfolio-ten-pink-35.vercel.app/chat",
 },
 
+ {
+  id: 6,
+  title: "ReelHunt",
+  tag: "Movie Discovery App",
+  year: "2026",
+  desc: "A cinematic movie and TV show discovery app powered by the TMDB API — featuring live search, genre filtering, favourites, full detail pages with cast and trailers, and smooth Framer Motion animations throughout.",
+  tech: ["React", "Vite", "Tailwind CSS", "TMDB API", "Framer Motion"],
+  color: "#7A4F1A", bg: "#FDF3E3", accent: "#E8A020",
+  link: "https://reelhunt.vercel.app",
+},
 ];
 
 const SKILLS = [
